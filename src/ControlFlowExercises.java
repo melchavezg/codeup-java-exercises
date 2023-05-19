@@ -1,7 +1,7 @@
-import java.util.Scanner;
-
-public class ControlFlowExercises {
-    public static void main(String[] args) {
+//import java.util.Scanner;
+//
+//public class ControlFlowExercises {
+//    public static void main(String[] args) {
 //      1a.  int i = 5;
 //        while (i <= 15) {
 //            System.out.print("i is " + i);
@@ -49,7 +49,7 @@ public class ControlFlowExercises {
 //
 //        }
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
 //        boolean confirm = true;
 //
 //        do {
@@ -74,33 +74,33 @@ public class ControlFlowExercises {
 //
 //        scanner.close();
 
-        boolean confirm = true;
-
-        do {
-            System.out.print("Enter a numerical grade (0-100): ");
-            int userGrade = scanner.nextInt();
-
-            String letterGrade;
-            if (userGrade >= 90) {
-                letterGrade = "A";
-            } else if (userGrade >= 80) {
-                letterGrade = "B";
-            } else if (userGrade >= 70) {
-                letterGrade = "C";
-            } else if (userGrade >= 60) {
-                letterGrade = "D";
-            } else {
-                letterGrade = "F";
-            }
-
-
-            System.out.println("Letter grade: " + letterGrade);
-
-            System.out.print("Do you want to continue? (yes/no): ");
-           confirm = scanner.next().equalsIgnoreCase("yes");
-        } while (confirm);
-        System.out.println("Thank you!");
-
-        scanner.close();
-    }
-}
+//        boolean confirm = true;
+//
+//        do {
+//            System.out.print("Enter a numerical grade (0-100): ");
+//            int userGrade = scanner.nextInt();
+//
+//            String letterGrade;
+//            if (userGrade >= 90) {
+//                letterGrade = "A";
+//            } else if (userGrade >= 80) {
+//                letterGrade = "B";
+//            } else if (userGrade >= 70) {
+//                letterGrade = "C";
+//            } else if (userGrade >= 60) {
+//                letterGrade = "D";
+//            } else {
+//                letterGrade = "F";
+//            }
+//
+//
+//            System.out.println("Letter grade: " + letterGrade);
+//
+//            System.out.print("Do you want to continue? (yes/no): ");
+//           confirm = scanner.next().equalsIgnoreCase("yes");
+//        } while (confirm);
+//        System.out.println("Thank you!");
+//
+//        scanner.close();
+//    }
+//}
