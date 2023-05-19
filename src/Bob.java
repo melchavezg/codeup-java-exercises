@@ -23,8 +23,5 @@ public class Bob {
             answer = scanner.next();
             scanner.nextLine();
         } while (answer.equalsIgnoreCase("y"));
-
-
-        }
     }
 }
