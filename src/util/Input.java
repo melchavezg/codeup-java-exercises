@@ -60,9 +60,19 @@ public class Input {
         if(userNum >= min && userNum <= max){
             return userNum;
         }
-        return getInt();
+        System.out.println("integer not between bounds");
+        return getInt(min, max);
     }
 
+    public double getDouble(double min, double max, String prompt){
+        System.out.println(prompt);
+        double userNum = Double.valueOf(this.getString());
+        if(userNum >= min && userNum <= max){
+            return userNum;
+        }
+        System.out.println("Double not between bounds");
+        return getDouble(min, max, prompt);
+    }
     public static void main(String[] args) {
         Input inputOne = new Input();
         // System.out.println("Get String: ");
@@ -70,6 +80,6 @@ public class Input {
        // System.out.println("yesNo: ");
        // System.out.println(inputOne.yesNo());
         System.out.println("Input a number between 1 - 10: ");
-//        System.out.println(inputOne.getDouble(1, 10, "an integer between 1-10"));
+        System.out.println(inputOne.getDouble(1, 10, "an integer between 1-10"));
     }
 }
