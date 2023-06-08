@@ -23,28 +23,44 @@ public class Input {
         }
     }
 
-    public double getDouble() {
-        return this.scanner.nextDouble();
+    public int getInt(){
+        System.out.println("enter an integar value");
+        String stringVal = getString();
+        try {
+            return Integer.valueOf(stringVal);
+        }catch (NumberFormatException e){
+            System.out.println("Not an integer");
+            return getInt();
+        }
     }
 
-    public int getInt(int min, int max) {
+    public double getDouble() {
+        System.out.println("Enter a double");
+        String stringVal = getString();
+        try {
+            return Double.valueOf(stringVal);
+        }catch (NumberFormatException e){
+            System.out.println("not a double");
+            return getDouble();
+        }
+    }
+
+    public int getInt(int min, int max, String prompt) {
+        System.out.println(prompt);
         int userNum = Integer.valueOf(this.getString());
         if(userNum >= min && userNum <= max){
             return userNum;
         }
         System.out.println("Error. Enter integer: ");
-        return getInt(min, min);
+        return getInt(min, max, prompt);
     }
 
-    public double getDouble(double min, double max, String prompt){
-        System.out.println(prompt);
-
-        double userNum = Double.valueOf(this.getString());
+    public int getInt (int min, int max){
+        int userNum = Integer.valueOf(this.getString());
         if(userNum >= min && userNum <= max){
             return userNum;
         }
-        System.out.println("Error. Enter integer: ");
-        return getDouble(min, max, prompt);
+        return getInt();
     }
 
     public static void main(String[] args) {
@@ -54,6 +70,6 @@ public class Input {
        // System.out.println("yesNo: ");
        // System.out.println(inputOne.yesNo());
         System.out.println("Input a number between 1 - 10: ");
-        System.out.println(inputOne.getDouble(1, 10, "an integer between 1-10"));
+//        System.out.println(inputOne.getDouble(1, 10, "an integer between 1-10"));
     }
 }
